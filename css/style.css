@@ -120,3 +120,11 @@ label {
     border-radius: 50%;
     margin-left: 12px;
 }
+select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font: normal normal normal 16px Roboto;
+    color: #42515f;
+    background-color: transparent;
+}
