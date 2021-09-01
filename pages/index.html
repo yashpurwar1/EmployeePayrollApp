@@ -17,33 +17,35 @@
                 </div>
             </div>
         </header>
+        <br>
         <div class="form-content">
-            <form class="form" action="#" onsubmit="save();return false">
+            <form class="form" action="#" onreset="resetForm()" onsubmit="save()">
                 <div class="form-head">
                     Employee Payroll Form
                 </div>
                 <div class="row-content">
                     <label class="label text" for="name">Name</label>
                     <input class="input" type="text" id="name" name="name" placeholder="Your name" required>
+                    <error-output class="text-error" for="text"></error-output>
                 </div>
                 <div class="row-content">
                     <label class="label text" for="profile">Profile Image</label>
                     <div class="profile-radio-content">
                         <label>
-                            <input type="radio" id="profile1" name="profile" value="../assets/profile-images/Ellipse -3.png" required>
-                            <img class="profile" id="image1" src="../assets/profile-images/Ellipse -3.png">
+                            <input type="radio" id="profile1" name="profile" value="../assets/profile-images/Ellipse -3.png">
+                            <img class="profile" id="image1" src="../Assets/profile-images/Ellipse -3.png">
                         </label>
                         <label>
-                            <input type="radio" id="profile2" name="profile" value="../assets/profile-images/Ellipse 1.png" required>
-                            <img class="profile" id="image2" src="../assets/profile-images/Ellipse 1.png">
+                            <input type="radio" id="profile2" name="profile" value="../assets/profile-images/Ellipse 1.png">
+                            <img class="profile" id="image2" src="../Assets/profile-images/Ellipse 1.png">
                         </label>
                         <label>
-                            <input type="radio" id="profile3" name="profile" value="../assets/profile-images/Ellipse -8.png" required>
-                            <img class="profile" id="image3" src="../assets/profile-images/Ellipse -8.png">
+                            <input type="radio" id="profile3" name="profile" value="../assets/profile-images/Ellipse -8.png">
+                            <img class="profile" id="image3" src="../Assets/profile-images/Ellipse -8.png">
                         </label>
                         <label>
-                            <input type="radio" id="profile4" name="profile" value="../assets/profile-images/Ellipse -7.png" required>
-                            <img class="profile" id="image4" src="../assets/profile-images/Ellipse -7.png">
+                            <input type="radio" id="profile4" name="profile" value="../assets/profile-images/Ellipse -7.png">
+                            <img class="profile" id="image4" src="../Assets/profile-images/Ellipse -7.png">
                         </label>
                     </div>
                 </div>
@@ -73,7 +75,7 @@
                 </div>
                 <div class="row-content">
                     <label class="label text" for="salary">Choose Your Salary</label>
-                    <input class="input" type="range" name="salary" id="salary" min="300000" max="5000000" step="100" value="4000000">
+                    <input class="input" type="range" name="salary" id="salary" min="300000" max="5000000" step="100" value="4000000" required>
                     <output class="salary-output" for="salary">4000000</output>
                 </div>
                 <div class="row-content">
@@ -137,7 +139,7 @@
                             <option value='2016'>2016</option>
                         </select>
                     </div>
-                </div>
+                </div>  
                 <div class="row-content">
                     <label class="label text" for="notes">Notes</label>
                     <textarea id="notes" class="input" name="Notes" style="height:100px;"></textarea>
@@ -145,12 +147,12 @@
                 <div class="buttonParent">
                     <a href="./index.html" class="resetButton button cancelButton">Cancel</a>
                     <div class="submit-reset">
-                        <button type="submit" class="button submitButton" id="submitButton">Submit</button>
+                        <button type="submit" class="button submitButton" id="submitButton" onclick="submitButton()">Submit</button>
                         <button type="reset" class="resetButton button" id="resetButton">Reset</button>
                     </div>
-                </div>
-            </form>
-        </div>
+                </div> 
+            </form>    
+        </div>  
         <script src="../js/validate.js"></script>
     </body>
 </html>
