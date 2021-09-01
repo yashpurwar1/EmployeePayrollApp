@@ -75,6 +75,6 @@ class PersonInfo {
                         this.start_date.toLocaleDateString("en-US", options);
         return 'Name = ' + this.name + ", Gender = " + this.gender + ", ProfilePic = " +this.profilePic
                     + ", Department = " + this.department + ", Salary = " + this.salary +
-                        ", StartDate = " + this.start_date + ", Note = " +this.note;
+                        ", StartDate = " + empDate + ", Note = " +this.note;
     }
 }
