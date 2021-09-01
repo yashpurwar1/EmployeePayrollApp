@@ -6,6 +6,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../CSS/style.css">
         <title>Employee payroll form</title>
+        <script src="../js/validate.js"></script>
+        <script src="../js/EmployeePayrollData.js"></script>
     </head>
     <body>
         <header class="header-content header">
@@ -132,6 +134,7 @@
                         </select>
                         <select id="year" name="Year">
                             <option value="Year">Year</option>
+                            <option value='2021'>2021</option>
                             <option value='2020'>2020</option>
                             <option value='2019'>2019</option>
                             <option value='2018'>2018</option>
@@ -139,6 +142,7 @@
                             <option value='2016'>2016</option>
                         </select>
                     </div>
+                    <error-output class="date-error" for="startDate"></error-output>
                 </div>  
                 <div class="row-content">
                     <label class="label text" for="notes">Notes</label>
@@ -147,12 +151,11 @@
                 <div class="buttonParent">
                     <a href="./index.html" class="resetButton button cancelButton">Cancel</a>
                     <div class="submit-reset">
-                        <button type="submit" class="button submitButton" id="submitButton" onclick="submitButton()">Submit</button>
+                        <button type="submit" class="button submitButton" id="submitButton">Submit</button>
                         <button type="reset" class="resetButton button" id="resetButton">Reset</button>
                     </div>
                 </div> 
             </form>    
         </div>  
-        <script src="../js/validate.js"></script>
     </body>
 </html>
