@@ -6,7 +6,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../CSS/style.css">
         <title>Employee payroll form</title>
-        <script src="../js/Validate.js"></script>
+        <script src="../js/validate.js"></script>
         <script src="../js/EmployeePayrollData.js"></script>
     </head>
     <body>
@@ -82,7 +82,7 @@
                 </div>
                 <div class="row-content">
                     <label class="label text" for="startDate">Start Date</label>
-                    <div>
+                    <div id="date">
                         <select id="day" name="Day">
                             <option value="Day">Day</option>
                             <option value='01'>01</option>
@@ -142,7 +142,7 @@
                             <option value='2016'>2016</option>
                         </select>
                     </div>
-                    <error-output class="date-error" for="startDate"></error-output>
+                    <error-output class="date-error" for="text"></error-output>
                 </div>  
                 <div class="row-content">
                     <label class="label text" for="notes">Notes</label>

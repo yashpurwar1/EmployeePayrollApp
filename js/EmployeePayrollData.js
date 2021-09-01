@@ -3,7 +3,6 @@ class PersonInfo {
      * setter and getter methods
      * validating the user inputs using regular expression
      */
-
     
     get name() {
         return this._name;
@@ -61,7 +60,13 @@ class PersonInfo {
     }
 
     set start_date ( start_date ) {
-        this._start_date = start_date;
+        let now = new Date();
+        now = Date.parse(now);
+        if ( start_date > now ) {
+            throw 'Start Date is Future date!';
+        } else {
+            this._start_date = start_date;
+        }
     }
 
     toString() {
@@ -70,6 +75,6 @@ class PersonInfo {
                         this.start_date.toLocaleDateString("en-US", options);
         return 'Name = ' + this.name + ", Gender = " + this.gender + ", ProfilePic = " +this.profilePic
                     + ", Department = " + this.department + ", Salary = " + this.salary +
-                        ", StartDate = " + empDate + ", Note = " +this.note;
+                        ", StartDate = " + this.start_date + ", Note = " +this.note;
     }
 }
