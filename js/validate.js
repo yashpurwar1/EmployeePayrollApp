@@ -35,6 +35,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
  });
  
+ // Uc 11
+ 
  const save = () => {
     try {
        let employeePayrollData = createEmployeePayroll();
@@ -61,7 +63,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let date = getInputValueById('#day') + " " +getInputValueById('#month') + " "
                                                        +getInputValueById('#year');
     employeePayrollData.start_date = Date.parse(date);
-    employeePayrollData.start_date = Date.parse(startDate);
     alert(employeePayrollData.toString());
     return employeePayrollData;
  }
@@ -81,7 +82,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
     return value;
  }
  
+ //UC 12
+ 
  function createAndUpdateStorage(employeePayrollData) {
+    localStorage.clear();
     let employeePayrollList = JSON.parse( localStorage.getItem ("EmployeePayrollList"));
     if(employeePayrollList != undefined) {
        employeePayrollList.push(employeePayrollData);
@@ -91,6 +95,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     alert(employeePayrollList.toString());
     localStorage.setItem("EmployeePayrollList", JSON.stringify(employeePayrollList));
  }
+ 
+ //UC 13
  
  const resetForm = () => {
     setValue('#name','');
